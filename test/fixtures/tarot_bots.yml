@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: MyText
+  ans_type: MyString
+  is_init: false
+
+two:
+  content: MyText
+  ans_type: MyString
+  is_init: false

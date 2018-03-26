@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @saju_answer.content %>
+</p>
+
+<p>
+  <strong>Next bot:</strong>
+  <%= @saju_answer.next_bot_id %>
+</p>
+
+<%= link_to 'Edit', edit_saju_answer_path(@saju_answer) %> |
+<%= link_to 'Back', saju_answers_path %>

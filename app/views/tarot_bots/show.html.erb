@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @tarot_bot.content %>
+</p>
+
+<p>
+  <strong>Ans type:</strong>
+  <%= @tarot_bot.ans_type %>
+</p>
+
+<p>
+  <strong>Is init:</strong>
+  <%= @tarot_bot.is_init %>
+</p>
+
+<%= link_to 'Edit', edit_tarot_bot_path(@tarot_bot) %> |
+<%= link_to 'Back', tarot_bots_path %>

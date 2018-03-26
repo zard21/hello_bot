@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Saju Bots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Ans type</th>
+      <th>Is init</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saju_bots.each do |saju_bot| %>
+      <tr>
+        <td><%= saju_bot.content %></td>
+        <td><%= saju_bot.ans_type %></td>
+        <td><%= saju_bot.is_init %></td>
+        <td><%= link_to 'Show', saju_bot %></td>
+        <td><%= link_to 'Edit', edit_saju_bot_path(saju_bot) %></td>
+        <td><%= link_to 'Destroy', saju_bot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Saju Bot', new_saju_bot_path %>

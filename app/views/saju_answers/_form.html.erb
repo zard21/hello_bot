@@ -1,0 +1,27 @@
+<%= form_with(model: saju_answer, local: true) do |form| %>
+  <% if saju_answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(saju_answer.errors.count, "error") %> prohibited this saju_answer from being saved:</h2>
+
+      <ul>
+      <% saju_answer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, id: :saju_answer_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :next_bot_id %>
+    <%= form.number_field :next_bot_id, id: :saju_answer_next_bot_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

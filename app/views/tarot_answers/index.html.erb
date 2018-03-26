@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tarot Answers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Next bot</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tarot_answers.each do |tarot_answer| %>
+      <tr>
+        <td><%= tarot_answer.content %></td>
+        <td><%= tarot_answer.next_bot_id %></td>
+        <td><%= link_to 'Show', tarot_answer %></td>
+        <td><%= link_to 'Edit', edit_tarot_answer_path(tarot_answer) %></td>
+        <td><%= link_to 'Destroy', tarot_answer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tarot Answer', new_tarot_answer_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @saju_bot.content %>
+</p>
+
+<p>
+  <strong>Ans type:</strong>
+  <%= @saju_bot.ans_type %>
+</p>
+
+<p>
+  <strong>Is init:</strong>
+  <%= @saju_bot.is_init %>
+</p>
+
+<%= link_to 'Edit', edit_saju_bot_path(@saju_bot) %> |
+<%= link_to 'Back', saju_bots_path %>

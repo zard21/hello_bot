@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tarot Bots</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Content</th>
+      <th>Ans type</th>
+      <th>Is init</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tarot_bots.each do |tarot_bot| %>
+      <tr>
+        <td><%= tarot_bot.content %></td>
+        <td><%= tarot_bot.ans_type %></td>
+        <td><%= tarot_bot.is_init %></td>
+        <td><%= link_to 'Show', tarot_bot %></td>
+        <td><%= link_to 'Edit', edit_tarot_bot_path(tarot_bot) %></td>
+        <td><%= link_to 'Destroy', tarot_bot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tarot Bot', new_tarot_bot_path %>
